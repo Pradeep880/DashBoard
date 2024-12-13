@@ -1,29 +1,64 @@
-/* NavbarMenu.css */
 .navigation-menu {
   width: 250px;
-  background-color: #003366; /* Dark blue background */
-  color: #ffffff; /* White text */
+  background-color: #f8f9fc;
   padding: 20px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #676a6d;
 }
 
-.navigation-menu .logo {
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 30px;
+  color: #676a6d;
 }
 
-.navigation-menu ul {
-  list-style: none;
+ul {
+  list-style-type: none;
   padding: 0;
+  margin: 0;
+  width: 100%;
+  color: #676a6d;
 }
 
-.navigation-menu ul li {
-  margin: 15px 0;
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
   cursor: pointer;
-  color: #cce7ff; /* Light blue text */
+  color: #676a6d;
+  font-size: 18px;
 }
 
-.navigation-menu ul li:hover {
-  color: #ffffff; /* White on hover */
+li:hover {
+  background-color: #e0e7ff;
+  border-radius: 8px;
+  color: #676a6d;
 }
+
+.nav-icon {
+  font-size: 35px;
+  color: #6ea7e4;
+  margin-right: 10px;
+}
+
+.promo-section {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #e0e7ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+

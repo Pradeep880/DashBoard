@@ -1,45 +1,31 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9fafe; /* Light blue-white background */
+  padding: 0;
+  font-family: Arial, sans-serif
 }
-
+.main-container{
+  margin: 0;
+  padding: 0;
+  border:2px solid red;
+  width: 100%;
+  background-image: url("./components/background.png");
+  background-repeat: round;
+  background-size: cover;
+}
 .app-container {
   display: flex;
+  padding: 50px;
+  background-image: url("./components/background.png");
+  background-repeat: round;
+  background-size: cover;
+  width: 75%;
+  margin: auto;
 }
-
-.navigation-menu {
-  width: 250px;
-  background-color: #003366; /* Dark blue background */
-  color: #ffffff; /* White text */
-  padding: 20px;
-  height: 100vh;
-}
-
-.navigation-menu .logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.navigation-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navigation-menu ul li {
-  margin: 15px 0;
-  cursor: pointer;
-  color: #cce7ff; /* Light blue text */
-}
-
-.navigation-menu ul li:hover {
-  color: #ffffff; /* White on hover */
-}
-
 .main-content {
   flex-grow: 1;
   padding: 20px;
+   background-color: #f7f7f7;
+ 
 }
 
 .progress-bar {
@@ -89,46 +75,36 @@ body {
 }
 
 .form-section {
-  flex: 1 1 calc(33% - 20px); /* Reducing section width */
-  background-color: #ffffff; /* White background for form sections */
+  flex: 1 1 calc(33% - 20px);
+  background-color: #ffffff; 
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #003366; /* Dark blue text */
-  box-sizing: border-box; /* Ensure padding does not affect the container size */
+  color: #003366; 
+  box-sizing: border-box; 
 }
 
 .radio-group label {
-  color: #003366; /* Dark blue text */
+  color: #003366;
 }
 
-textarea {
-  width: 100%;
-  height: 80px; /* Reduced height */
-  resize: none;
-  padding: 10px;
-  border: 1px solid #0066cc; /* Blue border */
-  border-radius: 4px;
-  background-color: white; /* Set background color to white */
-  color: grey; /* Set text color to grey */
-}
 
 input[type="number"],
 input[type="text"],
-input[type="file"],
-textarea {
-  width: 100%;
+input[type="file"] {
+  width: 95%;
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid #0066cc; /* Blue border */
+  margin-bottom: 10px;
+  border: none; 
   border-radius: 4px;
-  background-color: white; /* Set background color to white */
-  color: grey; /* Set text color to grey */
+  background-color: #d6d5d599; 
+  color: grey; 
 }
 
 .submit-button {
-  background-color: #0066cc; /* Blue button */
-  color: #ffffff; /* White text */
+  background-color: #0066cc; 
+  color: #ffffff; 
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -137,5 +113,5 @@ textarea {
 }
 
 .submit-button:hover {
-  background-color: #005bb5; /* Darker blue on hover */
+  background-color: #005bb5; 
 }
