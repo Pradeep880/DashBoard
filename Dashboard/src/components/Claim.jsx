@@ -1,120 +1,71 @@
-import { useState } from 'react';
+// import React from 'react';
+import { FaFileUpload, FaFileAlt, FaGlobe, FaLanguage,FaPlusCircle } from 'react-icons/fa';
 import './Claim.css';
+import FormSection from './FormSection';
 
-function ClaimForm() {
-  const [contractValue, setContractValue] = useState('');
-  const [claimValue, setClaimValue] = useState('');
-  const [place, setPlace] = useState('');
-  const [language, setLanguage] = useState('');
-  const [statement, setStatement] = useState('');
-  const [agreement, setAgreement] = useState(null);
-  const [additionalDocs, setAdditionalDocs] = useState([]);
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    const errors = {};
-    if (!contractValue) errors.contractValue = 'Required';
-    if (!claimValue) errors.claimValue = 'Required';
-    if (!place) errors.place = 'Required';
-    if (!language) errors.language = 'Required';
-    if (!statement) errors.statement = 'Required';
-    return errors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length === 0) {
-      console.log({
-        contractValue,
-        claimValue,
-        place,
-        language,
-        statement,
-        agreement,
-        additionalDocs
-      });
-      // Handle form submission
-    } else {
-      setErrors(validationErrors);
-    }
-  };
-
+function Claim() {
   return (
-    <div className="claim-form">
-      <h2>Claim Form</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="contractValue">Contract Value</label>
-        <input
-          id="contractValue"
-          name="contractValue"
-          type="text"
-          value={contractValue}
-          onChange={(e) => setContractValue(e.target.value)}
-        />
-        {errors.contractValue && <div className="error">{errors.contractValue}</div>}
-
-        <label htmlFor="claimValue">Claim Value</label>
-        <input
-          id="claimValue"
-          name="claimValue"
-          type="text"
-          value={claimValue}
-          onChange={(e) => setClaimValue(e.target.value)}
-        />
-        {errors.claimValue && <div className="error">{errors.claimValue}</div>}
-
-        <label htmlFor="place">Place</label>
-        <input
-          id="place"
-          name="place"
-          type="text"
-          value={place}
-          onChange={(e) => setPlace(e.target.value)}
-        />
-        {errors.place && <div className="error">{errors.place}</div>}
-
-        <label htmlFor="language">Language</label>
-        <input
-          id="language"
-          name="language"
-          type="text"
-          value={language}
-          onChange={(e) => setLanguage(e.target.value)}
-        />
-        {errors.language && <div className="error">{errors.language}</div>}
-
-        <label htmlFor="statement">Statement</label>
-        <textarea
-          id="statement"
-          name="statement"
-          value={statement}
-          onChange={(e) => setStatement(e.target.value)}
-        />
-        {errors.statement && <div className="error">{errors.statement}</div>}
-
-        <label htmlFor="agreement">Agreement under Disputes</label>
-        <input
-          id="agreement"
-          name="agreement"
-          type="file"
-          onChange={(e) => setAgreement(e.target.files[0])}
-        />
-        {errors.agreement && <div className="error">{errors.agreement}</div>}
-
-        <label htmlFor="additionalDocs">Additional Documentation</label>
-        <input
-          id="additionalDocs"
-          name="additionalDocs"
-          type="file"
-          multiple
-          onChange={(e) => setAdditionalDocs(Array.from(e.target.files))}
-        />
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <form className="claim-form">
+      <h2>File your Claim <span>(Approx 5 Minutes)</span></h2>
+      <div className="form-grid-row">
+        <FormSection title="Claim Value" icon={<FaFileAlt />}>
+          <input type="number" placeholder="Contract Value" required />
+          <input type="number" placeholder="Claim Value" required />
+        </FormSection>
+        <FormSection title="Place" icon={<FaGlobe />}>
+          <input type="text" placeholder="Select the place for proceedings" required />
+          <div className="radio-group">
+            <label><input type="radio" name="place" /> Yes</label>
+            <label><input type="radio" name="place" /> No</label>
+          </div>
+        </FormSection>
+        <FormSection title="Language" icon={<FaLanguage />}>
+          <input type="text" placeholder="Select the language for proceedings" required />
+          <div className="radio-group">
+            <label><input type="radio" name="language" /> Yes</label>
+            <label><input type="radio" name="language" /> No</label>
+          </div>
+        </FormSection>
+      </div>
+      <div className="form-grid-row">
+        <FormSection title="Statement" icon={<FaFileAlt />}>
+          <textarea placeholder="Write your statement here"></textarea>
+          <div className="file-upload-group">
+            <label htmlFor="statement-upload">Or upload your statement:</label>
+            <input type="file" id="statement-upload" accept=".pdf,.doc,.docx,.txt" />
+          </div>
+        </FormSection>
+        <FormSection title="Agreement under Disputes" icon={<FaFileUpload />}>
+          <div className="file-upload-group">
+            <label>
+              <FaFileUpload className="upload-icon" />
+              <span>Upload the Contract</span>
+              <div className="upload-info">Max 2MB, PDF</div>
+              <input type="file" accept=".pdf,.xml" />
+            </label>
+            <label>
+              <FaFileUpload className="upload-icon" />
+              <span>Arbitration Agreement</span>
+              <div className="upload-info">Max 2MB, PDF</div>
+              <input type="file" accept=".pdf,.xml" />
+            </label>
+          </div>
+        </FormSection>
+        <FormSection title="Additional Documentation" icon={<FaFileUpload />}>
+          <label>
+            <FaFileUpload className="upload-icon" />
+            <span>Upload the Contract</span>
+            <div className="upload-info">Max 2MB, PDF</div>
+            <input type="file" accept=".pdf,.xml" />
+          </label>
+          <div className="add-more">
+            <FaPlusCircle className="add-icon" />
+          </div>
+        </FormSection>
+      </div>
+      <button type="submit" className="submit-button">Submit Claim</button>
+    </form>
   );
 }
 
-export default ClaimForm;
+export default Claim;

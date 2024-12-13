@@ -1,0 +1,31 @@
+/* ProgressBar.css */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .progress-step {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .progress-step.completed .step-number {
+    background-color: #0066cc; /* Blue for completed steps */
+  }
+  
+  .progress-step .step-number {
+    width: 30px;
+    height: 30px;
+    background-color: #d6eaff; /* Light blue for incomplete steps */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    line-height: 30px;
+    color: #003366; /* Dark blue text */
+  }
+  
+  .progress-step .step-label {
+    font-size: 12px;
+    color: #003366; /* Dark blue text */
+  }
+  

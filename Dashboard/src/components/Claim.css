@@ -1,37 +1,116 @@
 .claim-form {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .claim-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .claim-form label {
-    margin-top: 10px;
-  }
-  
-  .claim-form input, .claim-form textarea {
-    padding: 8px;
-    margin-top: 5px;
-  }
-  
-  .claim-form .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .claim-form button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.form-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #003366;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.section-icon {
+  font-size: 24px;
+  color: #0066cc;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  /* border: 1px solid #0066cc; */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.file-upload-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-upload-group label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px dashed #0066cc; */
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.file-upload-group label input {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 32px;
+  color: #0066cc;
+}
+
+.upload-info {
+  font-size: 12px;
+  color: #999;
+}
+
+.add-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px dashed #0066cc; */
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-icon {
+  font-size: 32px;
+  color: #0066cc;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.submit-button:hover {
+  background-color: #005bb5;
+}

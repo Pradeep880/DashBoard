@@ -1,18 +1,17 @@
-// import React from 'react';
+// import  { useState } from 'react';
 import './ProgressBar.css';
 
 function ProgressBar() {
+  const steps = ["Preliminary", "Your Details", "KYC", "Parties", "Claim", "Review", "Payment"];
   return (
     <div className="progress-bar">
-      <div className="step completed">Preliminary</div>
-      <div className="step completed">Your Details</div>
-      <div className="step completed">KYC</div>
-      <div className="step active">Parties</div>
-      <div className="step">Claim</div>
-      <div className="step">Review</div>
-      <div className="step">Payment</div>
+      {steps.map((step, index) => (
+        <div key={index} className={`progress-step ${index < 4 ? 'completed' : ''}`}>
+          <div className="step-number">{index + 1}</div>
+          <div className="step-label">{step}</div>
+        </div>
+      ))}
     </div>
   );
 }
-
 export default ProgressBar;
