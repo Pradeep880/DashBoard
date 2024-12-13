@@ -1,15 +1,17 @@
-
-import { FaTachometerAlt, FaBriefcase, FaHeartbeat, FaCalendarAlt, FaFileAlt, FaGavel } from 'react-icons/fa';
 import './Navigation.css';
 import { RiDashboard3Line } from "react-icons/ri";
 import { BsActivity } from "react-icons/bs";
 import { SlBriefcase } from "react-icons/sl";
-import Rise from './rise.png'
+import { IoCalendarOutline } from "react-icons/io5";
+import { ImFilesEmpty } from "react-icons/im";
+import { PiHandFistLight } from "react-icons/pi";
+import Rise from './rise.png';
+import Logo from './logo_rise.png';
 function Navigation() {
   return (
     <div className="navigation-menu">
       <div className="logo">
-        <img src="/path-to-logo" alt="Jur Logo" /> {/* Replace with actual logo path */}
+        <img src={Logo} alt="Jur Logo" /> 
         <span>Jur</span>
       </div>
       <ul>
@@ -26,15 +28,15 @@ function Navigation() {
           <span>Activities</span>
         </li>
         <li>
-          <FaCalendarAlt className="nav-icon" />
+          <IoCalendarOutline className="nav-icon" />
           <span>Calendar</span>
         </li>
         <li>
-          <FaFileAlt className="nav-icon" />
+          <ImFilesEmpty className="nav-icon" />
           <span>Files</span>
         </li>
         <li>
-          <FaGavel className="nav-icon" />
+          <PiHandFistLight className="nav-icon" />
           <span>Open a Dispute</span>
         </li>
       </ul>

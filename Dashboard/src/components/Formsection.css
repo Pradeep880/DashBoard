@@ -1,7 +1,7 @@
-
-  .radio-group label {
+.radio-group label {
     color: #003366; /* Dark blue text */
   }
+  
   .form-section {
     flex: 1;
     min-width: 300px;
@@ -22,5 +22,33 @@
   .section-icon {
     font-size: 24px;
     color: #0066cc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .form-section {
+      padding: 15px;
+      min-width: 100%;
+    }
+  
+    .section-icon {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-section {
+      padding: 10px;
+      min-width: 100%;
+    }
+  
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .section-icon {
+      font-size: 18px;
+    }
   }
   
