@@ -53,15 +53,15 @@ This project involves creating a responsive dashboard using React. The dashboard
 
 ## Screenshots
 ### Desktop View
-![Desktop View](dashboard/screenshot/desktop_view.png)
+![Desktop View](Dashboard/screenshot/desktop_view.png)
 
 ### Tablet View
-![Tablet View](dashboard/screenshot/tablet_view.png)
+![Tablet View](Dashboard/screenshot/tablet_view.png)
 
 ### Mobile View
 <div style="display: flex; justify-content: space-between;">
-  <img src="dashboard/screenshot/mobile_view1.png" alt="Mobile View 1" style="width: 45%;">
-  <img src="dashboard/screenshot/mobile_view2.png" alt="Mobile View 2" style="width: 45%;">
+  <img src="Dashboard/screenshot/mobile_view1.png" alt="Mobile View 1" style="width: 45%;">
+  <img src="Dashboard/screenshot/mobile_view2.png" alt="Mobile View 2" style="width: 45%;">
 </div>
 
 ## Instructions to Run
