@@ -6,14 +6,12 @@ import Claim from './components/Claim';
 
 function App() {
   return (
-    <div className='main-container'>
     <div className="app-container">
       <Navigation />
       <main className="main-content">
         <ProgressBar />
         <Claim />
       </main>
-    </div>
     </div>
   );
 }

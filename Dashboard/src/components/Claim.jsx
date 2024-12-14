@@ -20,6 +20,9 @@ function Claim() {
         </FormSection>
         <FormSection title="Place" icon={<CiLocationOn  />}>
           <input type="text" placeholder="Select the place for proceedings" required />
+          <div className="text">
+          Is the place for the proceedings the one mentioned in the agreement?
+          </div>
           <div className="radio-group">
             <label><input type="radio" name="place" /> Yes</label>
             <label><input type="radio" name="place" /> No</label>
@@ -27,6 +30,9 @@ function Claim() {
         </FormSection>
         <FormSection title="Language" icon={<IoLanguageSharp  />}>
           <input type="text" placeholder="Select the language for proceedings" required />
+          <div className="text">
+          Is the language for the proceedings the one mentioned in the agreement?
+          </div>
           <div className="radio-group">
             <label><input type="radio" name="language" /> Yes</label>
             <label><input type="radio" name="language" /> No</label>
