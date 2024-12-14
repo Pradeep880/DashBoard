@@ -67,7 +67,7 @@ This project involves creating a responsive dashboard using React. The dashboard
 ## Instructions to Run
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/dashboard.git
+   git clone https://github.com/Pradeep880/dashboard.git
    cd dashboard
 2. **Install dependencies**:
    ```bash
