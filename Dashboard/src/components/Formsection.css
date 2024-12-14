@@ -1,5 +1,6 @@
 .radio-group label {
-    color: #003366; /* Dark blue text */
+    color: #003366; 
+    margin: 10px;
   }
   
   .form-section {
